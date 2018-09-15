@@ -121,8 +121,7 @@ $(function () {
   it('content change', function () {
 
   });
-  let firstFeedList;
-  let secondFeedList;
+  let firstFeedList; secondFeedList;
   beforeEach(function (done) {
     loadFeed(1, function () {
       firstFeedList = $('.feed').html();
