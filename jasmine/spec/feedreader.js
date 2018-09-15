@@ -15,16 +15,20 @@ $(function () {
    * feeds definitions, the allFeeds variable in our application.
    */
   describe('RSS Feeds', function () {
-    // use sctrict mode - recommended by Sonam from her review 
+    //  
     //created allFeeds into an empty aray on line 10 of apps.js and recived 2 failures,
     // both stating that allFeeds is not defined 
     /* This is our first test - it tests to make sure that the
      * allFeeds variable has been defined and that it is not
-     * empty. Experiment with this before you get started on
-     * the rest of this project. What happens when you change
-     * allFeeds in app.js to be an empty array and refresh the
-     * page?
+     * empty.
+     * removed the url object and test failed 
+     * removed the 
+     * use sctrict mode - recommended by Sonam from her review
      */
+    it('works', () => {
+      expect(true).toBe(true)
+    });
+
     it('allFeeds variable is defined and not empty', function () {
       expect(allFeeds).toBeDefined();
       expect(allFeeds.length).not.toBe(0);
@@ -42,7 +46,6 @@ $(function () {
       })
     });
 
-
     /* TODO: Write a test that loops through each feed
      * in the allFeeds object and ensures it has a name defined
      * and that the name is not empty.
@@ -58,13 +61,8 @@ $(function () {
   })
 
 
-
-
   /* TODO: Write a test that ensures the menu element is hidden
-    
-   * hidden by default. You'll have to analyze the HTML and
-   * the CSS to determine how we're performing the
-   * hiding/showing of the menu element.
+       
    * check line 20 of HTML menu is set to hidden 
    * check notes on line 72 -75 of normalize CSS for hidden attribute also 
    */
@@ -94,10 +92,8 @@ $(function () {
     })
   })
   /* TODO: Write a test that ensures when the loadFeed
-   * function is called and completes its work, there is at least
-   * a single .entry element within the .feed container.
-   * Remember, loadFeed() is asynchronous so this test will require
-   * the use of Jasmine's beforeEach and asynchronous done() function.
+   *Had issues with the Async and callbacks 
+   *refer to notes on error message and how I found the solution 
    */
   beforeEach(function (done) {
     loadFeed(0, function () {
@@ -106,14 +102,14 @@ $(function () {
   });
 
   it('feed contains at least one entry', function () {
-    let entryNumber = $('entry').length;
+    let entryNumber = $('.entry').length;
     expect(entryNumber).toBeGreaterThan(0);
   });
 
 
   /* TODO: Write a new test suite named "New Feed Selection" */
-  describe('New Feed Selection', () => {
-    it('works', () => {
+  describe('New Feed Selection', function () {
+    it('works', function () {
       expect(true).toBe(true)
     })
   })
@@ -122,23 +118,30 @@ $(function () {
    * by the loadFeed function that the content actually changes.
    * Remember, loadFeed() is asynchronous.
    */
+  it('content change', function () {
+
+  });
   let firstFeedList;
   let secondFeedList;
   beforeEach(function (done) {
     loadFeed(1, function () {
       firstFeedList = $('.feed').html();
       loadFeed(2, function () {
-done();
+        done();
       });
     });
   });
-  afterEach(function () {
-    loadFeed(0);
-  });
-  it('feed changes', function () {
+
+  // afterEach(function (done) {
+  //   loadFeed(0);
+  //   done();
+  // });
+
+  it('feed changes', function (done) {
     expect(firstFeedList).toBeDefined();
     secondFeedList = $('.feed').html();
-    expect(secondFeedList).toBeDefined();
+    // expect(secondFeedList).toBeDefined();
     expect(firstFeedList).not.toEqual(secondFeedList);
+    done();
   })
 }());
