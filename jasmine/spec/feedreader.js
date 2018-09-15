@@ -123,24 +123,17 @@ $(function () {
   });
   let firstFeedList; secondFeedList;
   beforeEach(function (done) {
-    loadFeed(1, function () {
-      firstFeedList = $('.feed').html();
-      loadFeed(2, function () {
+    loadFeed(0, function () {
+      firstFeedList = document.querySelector('.feed').innerHTML;
+      loadFeed(1, function () {
         done();
       });
     });
   });
-
-  // afterEach(function (done) {
-  //   loadFeed(0);
-  //   done();
-  // });
-
-  it('feed changes', function (done) {
-    expect(firstFeedList).toBeDefined();
-    secondFeedList = $('.feed').html();
-   expect(secondFeedList).toBeDefined();
-    expect(firstFeedList).not.toEqual(secondFeedList);
-    done();
-  })
+it('feed content changes',function(){
+  let secondFeedList = document.querySelector('.feed').innerHTML;
+  expect(firstFeedList).not.toBe(secondFeedList);
+  done();
+})
+  
 }());

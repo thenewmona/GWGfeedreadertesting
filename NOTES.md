@@ -29,3 +29,10 @@ Error: Expected 0 to be greater than 0.
     all test still passed but I got a message 
     SPEC HAS NO EXPECTATIONS content change and now I can't get rid of it 
     it is not an error per say 
+
+    9/15/2018
+    Installed Jest , Not sure if it is user or document but it does not seem very intuaitive 
+    following the instructions from https://jestjs.io/ I have everything installed
+    Not sure how much I want to play around with it since I am so far behind 
+    i know it exist and I can come back to it later 
+    Still need to fix the SPEC expectations issue 
