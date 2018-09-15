@@ -140,7 +140,7 @@ $(function () {
   it('feed changes', function (done) {
     expect(firstFeedList).toBeDefined();
     secondFeedList = $('.feed').html();
-    // expect(secondFeedList).toBeDefined();
+   expect(secondFeedList).toBeDefined();
     expect(firstFeedList).not.toEqual(secondFeedList);
     done();
   })
