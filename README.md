@@ -2,7 +2,7 @@
 
 In this project I am given a web-based application that reads RSS feeds. 
 
-The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/).
+The original developer of this application clearly saw the value in testing, they've already included the [Jasmine](http://jasmine.github.io/) files.
 
 Jasmine is a behaivor driven (BDD) testing framework.
 
