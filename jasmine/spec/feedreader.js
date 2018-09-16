@@ -37,7 +37,7 @@ $(function () {
       let body = document.body;
       let menuIcon = document.querySelector('menu-icon-link')
     });
-  });
+  
   it('menu changes visability when clicked', function () {
     $('.menu-icon-link').trigger('click');
     expect($('body').hasClass('menu-hidden')).toBe(false);
@@ -125,4 +125,4 @@ it('check to see if the feeds change',function(){
   expect(firstFeedList).not.toEqual(secondFeedList);
 });
 });
-
+});

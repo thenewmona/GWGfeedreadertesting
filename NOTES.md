@@ -90,3 +90,6 @@ Error: Expected 0 to be greater than 0.
      * First test comes from Devhints.io/jamine cheatsheet 
      * use sctrict mode - recommended by Sonam from her review
      */
+
+     9/16/2018 had issues with order of the test. Lindsay Ciastko saw that I had a {} issues recommended that I move them from line 40 to line 128, it resovled both my SPEC issue and my order issue 
+     Ready to submit again 
