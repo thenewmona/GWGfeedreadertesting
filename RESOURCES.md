@@ -1,4 +1,4 @@
-###Udacity Resources
+# Udacity Resources
 
 **https://docs.google.com/spreadsheets/d/1NF750x4wYZY4idQmPGDF0VeujQy8c4EeYN4CQhCi45k/edit#gid=0
 
@@ -40,13 +40,13 @@
 
 [How to get started with jasmine testing](https://www.youtube.com/watch?v=dFz2h7o0vqs)
 
-##Articles 
+## Articles 
 
 https://www.rainforestqa.com/blog/2014-07-14-test-your-javascript-with-jasmine-the-basics-part-1/
 
 https://www.rainforestqa.com/blog/2014-10-06-test-your-javascript-with-jasmine-part-2/
 
-###async callback issues resolved 
+### async callback issues resolved 
 
 https://www.jstwister.com/post/unit-testing-beginners-guide-spying-fake-timers/
 
@@ -59,7 +59,7 @@ https://medium.com/backticks-tildes/how-to-test-javascript-with-jasmine-framewor
 https://medium.com/letsboot/testing-javascript-with-jasmine-basics-48efe03cf973
 
 
-##Testing with Jest 
+## Testing with Jest 
 
 https://jestjs.io/en/
 

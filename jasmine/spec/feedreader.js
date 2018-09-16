@@ -25,9 +25,7 @@ $(function () {
      * First test comes from Devhints.io/jamine cheatsheet 
      * use sctrict mode - recommended by Sonam from her review
      */
-    it('works', () => {
-      expect(true).toBe(true)
-    });
+
 
     it('allFeeds variable is defined and not empty', function () {
       expect(allFeeds).toBeDefined();
@@ -35,7 +33,7 @@ $(function () {
     });
 
 
-    /* TODO: Write a test that loops through each feed
+    /*
      * in the allFeeds object and ensures it has a URL defined
      * and that the URL is not empty.
      */
@@ -45,95 +43,76 @@ $(function () {
         expect(feed.url.length).not.toBe(0);
       })
     });
-
-    /* TODO: Write a test that loops through each feed
+    it('allFeeds objects and name are defined and not empty', function () {
+      allFeeds.forEach(function (feed) {
+        expect(feed.name).toBeDefined();
+        expect(feed.name.length).not.toBe(0);
+      })
+    });
+    /* 
      * in the allFeeds object and ensures it has a name defined
      * and that the name is not empty.
      */
   });
 
 
-  /* TODO: Write a new test suite named "The menu" */
+
   describe('The Menu', () => {
-    it('works', () => {
-      expect(true).toBe(true)
-    })
-  })
-
-
-  /* TODO: Write a test that ensures the menu element is hidden
-       
-   * check line 20 of HTML menu is set to hidden 
-   * check notes on line 72 -75 of normalize CSS for hidden attribute also 
-   */
-
-  it('menu hides by default', function () {
-    expect($('body').hasClass('menu-hidden')).toBe(true);
-    let body = document.body;
-    let menuIcon = document.querySelector('menu-icon-link')
-  });
-
-  /* TODO: Write a test that ensures the menu changes
-   * visibility when the menu icon is clicked. This test
-   * should have two expectations: does the menu display when
-   * clicked and does it hide when clicked again.
-   */
-  it('menu changes visability when clicked', function () {
-    $('.menu-icon-link').trigger('click');
-    expect($('body').hasClass('menu-hidden')).toBe(false);
-    $('.menu-icon-link').trigger('click');
-    expect($('body').hasClass('menu-hidden')).toBe(true);
-  });
-
-  /* TODO: Write a new test suite named "Initial Entries" */
-  describe('Initial Entries', () => {
-    it('works', () => {
-      expect(true).toBe(true)
-    })
-  })
-  /* TODO: Write a test that ensures when the loadFeed
-   *Had issues with the Async and callbacks 
-   *refer to notes on error message and how I found the solution 
-   */
-  beforeEach(function (done) {
-    loadFeed(0, function () {
-      done();
-    });
-  });
-
-  it('feed contains at least one entry', function () {
-    let entryNumber = $('.entry').length;
-    expect(entryNumber).toBeGreaterThan(0);
-  });
-
-
-  /* TODO: Write a new test suite named "New Feed Selection" */
-  describe('New Feed Selection', function () {
-    it('works', function () {
-      expect(true).toBe(true)
-    })
-  })
-
-  /* TODO: Write a test that ensures when a new feed is loaded
-   * by the loadFeed function that the content actually changes.
-   * Remember, loadFeed() is asynchronous.
-   */
-  it('content changes', function () {
-
-  });
-  let firstFeedList; secondFeedList;
-  beforeEach(function (done) {
-    loadFeed(0, function () {
-      firstFeedList = document.querySelector('.feed').innerHTML;
-      loadFeed(1, function () {
-        done();
+    it('menu hides by default', function () {
+      expect($('body').hasClass('menu-hidden')).toBe(true);
+      let body = document.body;
+      let menuIcon = document.querySelector('menu-icon-link')
+      it('menu changes visability when clicked', function () {
+        $('.menu-icon-link').trigger('click');
+        expect($('body').hasClass('menu-hidden')).toBe(false);
+        $('.menu-icon-link').trigger('click');
+        expect($('body').hasClass('menu-hidden')).toBe(true);
       });
     });
   });
-it('feed content changes',function(){
-  let secondFeedList = document.querySelector('.feed').innerHTML;
-  expect(firstFeedList).not.toBe(secondFeedList);
-  done();
-})
   
+  
+  describe('Initial Entries', () => {
+    beforeEach(function (done) {
+      loadFeed(0, function () {
+        done();
+      });
+    });
+
+    it('feed contains at least one entry', function () {
+      let entryNumber = $('.entry').length;
+      expect(entryNumber).toBeGreaterThan(0);
+    });
+  })
+
+  /* 
+   *Had issues with the Async and callbacks 
+   *refer to notes on error message and how I found the solution 
+   * I have changed this code so many times 
+   * I am not understanding what it means that   SPEC HAS EXPECTATIONS 
+   * I have googled it, and all the results come backs with other projects with the same error message 
+   * but no solution 
+   */
+
+  describe('New Feed Selection', function () {
+    it('content change', function () {
+      let firstFeedList;
+      let secondFeedList;
+      beforeEach(function (done) {
+        loadFeed(1, function () {
+          firstFeedList = $('.feed').html();
+          loadFeed(2, function () {
+            done();
+          });
+        });
+      });
+      it('feed changes', function (done) {
+        expect(firstFeedList).toBeDefined();
+        secondFeedList = $('.feed').html();
+        expect(secondFeedList).toBeDefined();
+        expect(firstFeedList).not.toEqual(secondFeedList);
+        done();
+      });
+    }); 
+  });  
 }());
