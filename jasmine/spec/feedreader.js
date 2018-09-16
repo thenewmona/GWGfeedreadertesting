@@ -118,7 +118,7 @@ $(function () {
    * by the loadFeed function that the content actually changes.
    * Remember, loadFeed() is asynchronous.
    */
-  it('content change', function () {
+  it('content changes', function () {
 
   });
   let firstFeedList; secondFeedList;
