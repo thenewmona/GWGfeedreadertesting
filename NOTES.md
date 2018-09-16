@@ -93,3 +93,24 @@ Error: Expected 0 to be greater than 0.
 
      9/16/2018 had issues with order of the test. Lindsay Ciastko saw that I had a {} issues recommended that I move them from line 40 to line 128, it resovled both my SPEC issue and my order issue 
      Ready to submit again 
+
+     deleted this from my code , Rewrote the New Feed Selection and now my SPEC issue is gone 
+     // describe('New Feed Selection', function () {
+
+//   it('the content changes', function () {
+//     let firstFeedList;   
+//     beforeEach(function (done) {
+//       loadFeed(0, function () {
+//        firstFeedList =  ('.feed').html();       
+//         loadFeed(1, function () {
+//           done();       
+//         });
+//       });     
+//     });
+
+//       it('the feed changes', function (done) {
+
+//         let secondFeedList = ('.feed').html();        
+//         expect(firstFeedList).not.toBe(secondFeedList);
+//         done();
+//       });
