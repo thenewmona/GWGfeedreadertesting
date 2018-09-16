@@ -1,15 +1,20 @@
 # Udacity FeedReader Testing - Project 4
 
 In this project I am given a web-based application that reads RSS feeds. 
+
 The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/).
+
 Jasmine is a behaivor driven (BDD) testing framework.
+
 BDD puts emphasive on writing specification against user's behavior, these test are small, easy to read, and very basic. 
+
 [Jest](https://jestjs.io/docs/en/getting-started) is test-driven development (TDD), based off of Jasmine,
 Jest is becoming more popular especially in the React community.
+
 TDD relies on repetition of the development cycle, once again these test are small, easy to read, and very basic. 
 Here is a link to a short tutorial on [Jest](https://jestjs.io/docs/en/getting-started).
 
-## Instructions to accessing and running this project 
+# Instructions to accessing and running this project 
 
 1. Go to https://github.com/thenewmona/GWGfeedreadertesting you can either clone or download the file 
 2. Open the file, and open the index.html in your browser, then you will scroll to the bottom of the screen to see the test results
@@ -42,7 +47,7 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 21. When complete - all of your tests should pass. 
 22. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
 
-#Notes for Reviewer 
+# Notes for Reviewer 
 
 *I have compiled all my resources and can be found here **./RESOURCES.md**
 
