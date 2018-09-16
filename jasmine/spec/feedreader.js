@@ -22,7 +22,7 @@ $(function () {
      * allFeeds variable has been defined and that it is not
      * empty.
      * removed the url object and test failed 
-     * removed the 
+     * First test comes from Devhints.io/jamine cheatsheet 
      * use sctrict mode - recommended by Sonam from her review
      */
     it('works', () => {
