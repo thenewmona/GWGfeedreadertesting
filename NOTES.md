@@ -35,7 +35,7 @@ Error: Expected 0 to be greater than 0.
    * check line 20 of HTML menu is set to hidden 
    * check notes on line 72 -75 of normalize CSS for hidden attribute also 
    */
-   
+
 
     9/15/2018
     Installed Jest , Not sure if it is user or document but it does not seem very intuaitive 
@@ -79,3 +79,14 @@ Error: Expected 0 to be greater than 0.
  How to contribute (Optional): you may be working on open source project and would love to have someone contributing. What would the rules be?
  Credits Did you use someone else's code? Give them a shout-out (StackOverflow, mdn, w3school, jasmine)
  writing-readmes
+
+ //  
+    //created allFeeds into an empty aray on line 10 of apps.js and recived 2 failures,
+    // both stating that allFeeds is not defined 
+    /* This is our first test - it tests to make sure that the
+     * allFeeds variable has been defined and that it is not
+     * empty.
+     * removed the url object and test failed 
+     * First test comes from Devhints.io/jamine cheatsheet 
+     * use sctrict mode - recommended by Sonam from her review
+     */

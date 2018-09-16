@@ -32,13 +32,13 @@ $(function () {
       allFeeds.forEach(function (feed) {
         expect(feed.url).toBeDefined();
         expect(feed.url.length).not.toBe(0);
-      })
+      });
       it('allFeeds objects and name defined and not empty', function () {
         allFeeds.forEach(function (feed) {
           expect(feed.name).toBeDefined();
           expect(feed.name.length).not.toBe(0);
           expect(feed.name).toBe("string");
-        })
+        });
       });
     });
 
@@ -47,8 +47,7 @@ $(function () {
         expect($('body').hasClass('menu-hidden')).toBe(true);
         let body = document.body;
         let menuIcon = document.querySelector('menu-icon-link')
-      });
-    });
+      });  
       it('menu changes visability when clicked', function () {
         $('.menu-icon-link').trigger('click');
         expect($('body').hasClass('menu-hidden')).toBe(false);
@@ -56,6 +55,7 @@ $(function () {
         expect($('body').hasClass('menu-hidden')).toBe(true);
       });
     });
+  });
   
 
   describe('Initial Entries', function () {
