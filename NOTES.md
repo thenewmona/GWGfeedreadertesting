@@ -114,3 +114,28 @@ Error: Expected 0 to be greater than 0.
 //         expect(firstFeedList).not.toBe(secondFeedList);
 //         done();
 //       });
+
+9/17/2018
+
+Just got my feedreader back again 
+
+This is not comprehensive enough.
+As mentioned in the previous review, the test is to check for at least 1 entry in container feed and your code checks for entry to be more than one, rather than checking if its inside container feed or not!
+:bulb: Hint:
+Use the parent-child relationship to write tests!
+
+expect($(".parent .child") ----> expect($('.feed .entry)
+
+I think I am now understanding, added what he wanted, I am just trying to figure out how to test it
+Went through the DOM and found the child, and where it is in  the HTML, but I think those stupid handlebars are throwing me off.
+
+`<script class="tpl-entry" type="text/x-handlebars-template">
+            <a class="entry-link" href="{{link}}">
+                <article class="entry">
+                    <h2>{{title}}</h2>
+                    <p>{{contentSnippet}}</p>
+                </article>
+            </a>
+        </script>`
+If i just comment out `<h2>{{title}}</h2>`, this should make my test fail, but it isn't
+So I am having an issue understanding how to make this fail so that I know that the test is working correctly 

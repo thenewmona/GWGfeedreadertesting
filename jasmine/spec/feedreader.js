@@ -47,7 +47,7 @@ $(function () {
   });
 
 
-  describe('Initial Entries', function () {
+  describe('Initial Feed Entries', function () {
 
     beforeEach(function (done) {
       loadFeed(0, function () {
@@ -55,8 +55,12 @@ $(function () {
       });
     });
 
+// having a hard time making this fail in Jasmine, I think the handlebars are throwing me off
+//can't find the handlebars-template. I got it to fail when I commented out the class objects in the HTML
+//Would love some ideas on how to test this better 
+
     it('feed contains at least one entry', function () {
-      let entryNumber = $('.entry').length;
+      let entryNumber = $('.feed .entry-link .entry').length;
       expect(entryNumber).toBeGreaterThan(0);
     });
   })
@@ -72,9 +76,7 @@ $(function () {
    */
 
 
-  //     });
-
-  //   }());
+  
 
   describe('New Feed Selection', function () {
     let firstFeedList;

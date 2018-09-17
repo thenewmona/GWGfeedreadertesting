@@ -70,3 +70,10 @@ https://www.slideshare.net/MichaPierzchaa/painless-javascript-testing-with-jest
 https://blog.cloudboost.io/first-run-facebook-jest-the-js-testing-tool-for-people-who-hate-writing-tests-30b5bc4b9dd2
 
 [Jest Crash Course - Brad Traversy](https://www.youtube.com/watch?v=7r4xVDI2vho)
+
+## Error message research 
+[SPEC HAS NO EXCEPTIONS](https://stackoverflow.com/questions/45578981/spec-has-no-expectations-jasmine-testing-the-callback-function)
+
+https://github.com/karma-runner/karma-jasmine/issues/108
+
+[testing .parent and .child](http://thinkingonthinking.com/DOM-feedback-with-JavaScript-Jasmine/) DOM feedback
